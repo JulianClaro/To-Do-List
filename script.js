@@ -123,8 +123,12 @@ function showTask() {
 function clearTask() {
     window.localStorage.removeItem('todos');
     listContainer.innerHTML = '';
-    informTab.classList.toggle("openinfo");
+    informTab.classList.remove("openinfo"); // force hide
+    descText.textContent = "";
+    date.textContent = "";
+    activeItem = null;
     todos = [];
 }
 
 showTask(); // Initialize tasks on page load
+
