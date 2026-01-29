@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+    <div id="preloader">
+        <h4>LOADING...</h4>
+        <div id="loading-box">
+            <div id="loading"></div>  
+        </div>
+        
+    </div>
+    
+
+    <div class="wrapper">
+        <fieldset class="objective-list" id="objective-list">
+        <legend>Objective List</legend>
+        <div class="objective-tab">
+            <div class="containers">
+            <div class="row">
+                <div class="input-log">
+                    <input type="text" name="input-box" id="input-box" placeholder="Enter task here">
+                    <textarea name="input-area" id="input-area" placeholder="Enter description here"></textarea>
+                </div>
+                <button onclick="addTask()"><i class='bx bxs-chevron-right' ></i></button>
+            </div>
+            <ul id="list-container">
+                <!--list content-->
+            </ul>   
+            </div>
+            <div class="clearbutt">
+                <button onclick="clearTask()">CLEAR</button>
+            </div>
+        </div>
+        
+    </fieldset>
+    <fieldset class="information" id="information">
+        <legend>Information</legend>
+        <div class="information-tab">
+            <div class="inform-row">
+                <p id="datetime"></p>
+                <p id="descriptionText">
+            </div>
+            <div class="button-options">
+                <span id = "deleteBtn"><i class='bx bxs-trash'></i></span>
+                <span id = "markBtn"><i class='bx bxs-check-square' ></i></span>
+            </div>
+        </div>
+        
+    </fieldset>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
